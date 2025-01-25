@@ -67,7 +67,7 @@ function SetupSection() {
                   <CheckCircle className="h-6 w-6 text-green-500 flex-shrink-0" />
                   <div>
                     <h3 className="text-white  font-medium mb-2">{feature.title}</h3>
-                    <p className="text-gray-400 w-[320px] text-sm">{feature.description}</p>
+                    <p className="text-gray-400 w-auto text-sm">{feature.description}</p>
                   </div>
                 </div>
               ))}
@@ -75,7 +75,7 @@ function SetupSection() {
           </div>
 
           {/* Right Column - FAQ Accordion */}
-          <div className="bg-white rounded-2xl p-6">
+          <div className="bg-white border-t-4 border-solid border-green-500 rounded-2xl p-6">
             {faqItems.map((item, index) => (
               <AccordionItem
                 key={index}

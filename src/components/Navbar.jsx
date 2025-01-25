@@ -1,15 +1,15 @@
-import React, { useState } from 'react'
+import React, { useState } from "react"
 
-const Navbar = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+const  Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
-    const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
 
   return (
-   <nav className="absolute top-0 left-0 right-0 z-[60] max-sm:px-4">
+    <nav className="absolute top-0 left-0 right-0 z-[60]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-6">
-          <div className="text-white text-2xl font-bold z-5">Trivia</div>
+          <div className="text-white text-2xl font-bold z-50">Trivia</div>
 
           {/* Desktop menu */}
           <div className="hidden md:flex items-center space-x-8">
@@ -28,7 +28,7 @@ const Navbar = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden z-5  ">
+          <div className="md:hidden z-50">
             <button
               onClick={toggleMenu}
               className="text-white focus:outline-none"
@@ -47,14 +47,14 @@ const Navbar = () => {
 
         {/* Mobile menu */}
         {isMenuOpen && (
-          <div className=" md:hidden fixed inset-0 z-6 max-sm:px-4 ">
+          <div className="md:hidden fixed inset-0 z-40">
             {/* Blur background */}
             <div className="absolute inset-0 bg-black/30 backdrop-blur-md" onClick={toggleMenu}></div>
 
             {/* Menu content */}
             <div className="relative z-50 h-full flex flex-col">
               {/* Header with logo and close button */}
-              <div className="flex justify-between items-center py-6 px-4 sm:px-6 ">
+              <div className="flex justify-between items-center py-6 px-4 sm:px-6">
                 <div className="text-white text-2xl font-bold">Trivia</div>
                 <button onClick={toggleMenu} className="text-white focus:outline-none" aria-label="Close menu">
                   <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -64,8 +64,8 @@ const Navbar = () => {
               </div>
 
               {/* Menu items */}
-              <div className="flex-grow  overflow-y-auto">
-                <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 ">
+              <div className="flex-grow overflow-y-auto">
+                <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                   <a href="#" className="text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-white/10">
                     Demos
                   </a>
@@ -89,3 +89,4 @@ const Navbar = () => {
 }
 
 export default Navbar
+
